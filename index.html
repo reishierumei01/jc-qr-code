@@ -3,34 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gift Voice Message</title>
+  <title>Gift Audio QR Code Generator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Gift Voice Message</h1>
-    <p>Upload a voice message and generate a QR code for it!</p>
+    <h1>Gift Audio QR Code Generator</h1>
+    <p>Upload your audio message and generate a QR code for your loved ones.</p>
 
-    <div class="uploader">
-      <label for="audioUpload">Upload an audio file:</label>
+    <div class="upload-section">
       <input type="file" id="audioUpload" accept="audio/*">
+      <button id="generateQR" disabled>Generate QR Code</button>
     </div>
 
     <div id="audioPreview" class="hidden">
-      <h3>Audio Preview:</h3>
-      <audio controls id="audioPlayer"></audio>
+      <p>Audio uploaded successfully! Preview:</p>
+      <audio id="audioPlayer" controls></audio>
     </div>
-
-    <button id="generateQR" disabled>Generate QR Code</button>
 
     <div id="qrCode" class="hidden">
-      <h3>Your QR Code:</h3>
+      <h2>Your QR Code</h2>
       <canvas id="qrCanvas"></canvas>
+      <p>Scan this QR code to hear your message.</p>
     </div>
   </div>
-
-  <!-- QRious Library -->
-  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
 
   <script src="script.js"></script>
 </body>
