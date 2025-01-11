@@ -47,7 +47,6 @@
   </div>
 
   <script>
-    // Get the audio URL from the query parameters
     const urlParams = new URLSearchParams(window.location.search);
     const audioURL = urlParams.get('audio');
 
@@ -56,11 +55,10 @@
 
     if (audioURL) {
       playButton.addEventListener('click', () => {
-        // Show and play the audio file
         audioPlayer.src = audioURL;
         audioPlayer.style.display = 'block';
         audioPlayer.play();
-        playButton.style.display = 'none'; // Hide the button after clicking
+        playButton.style.display = 'none';
       });
     } else {
       alert('Audio file not found.');
