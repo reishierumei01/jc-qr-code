@@ -49,9 +49,8 @@ audioUpload.addEventListener("change", async (event) => {
 generateQRButton.addEventListener("click", () => {
   if (!audioURL) return;
 
-  // Create the landing page URL with the audio file URL as a query parameter
- const landingPageURL = `https://<reishierumei01>.github.io/<repository-name>/landing.html?audio=${encodeURIComponent(audioURL)}`;
-
+  // Construct the landing page URL with the audio file URL
+  const landingPageURL = `landing.html?audio=${encodeURIComponent(audioURL)}`;
 
   // Generate the QR code
   new QRious({
